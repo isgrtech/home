@@ -776,6 +776,64 @@ img {
     transition: transform .2s, box-shadow .2s
 }
 
+.check-in-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+    max-width: 970px;
+    margin: 36px auto 0
+}
+
+.check-in-grid .travel-feature-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 14px #33333312;
+    transition: transform .2s, box-shadow .2s
+}
+
+.check-in-grid .travel-feature-card>img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    object-fit: cover
+}
+
+.check-in-grid .travel-feature-card>img.note-thumbnail {
+    object-fit: contain;
+    background: #f8f8f7
+}
+
+.check-in-grid .travel-feature-card .travel-feature-copy {
+    align-self: stretch;
+    align-items: flex-start;
+    flex: 1;
+    padding: 22px 24px;
+    gap: 7px
+}
+
+.check-in-grid .travel-feature-card .travel-feature-copy>strong {
+    font-size: 21px
+}
+
+.check-in-grid .travel-feature-card .travel-feature-copy>span:not(.eyebrow):not(.travel-feature-cta) {
+    font-size: 12px
+}
+
+.check-in-grid .travel-feature-card .eyebrow,
+.check-in-grid .travel-feature-card .travel-feature-cta {
+    display: none
+}
+
+.check-in-grid .travel-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px #33333320
+}
+
 .note-profile-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 24px #33333316
@@ -1145,9 +1203,15 @@ img {
 
     .hobbies,
     .toys,
-    .diary {
+    .diary,
+    .check-in {
         padding-left: 22px;
         padding-right: 22px
+    }
+
+    .check-in-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px
     }
 
     .hobby-grid {

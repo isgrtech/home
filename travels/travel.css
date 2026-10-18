@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --paper: #eeeeec;
+    --ink: #353535;
+    --muted: #777875;
+    --green: #666966;
+    --line: #d8d9d6;
+    --serif: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
+    --sans: 'DM Sans', 'Zen Maru Gothic', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 86px;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.9
+}
+
+.travel-page {
+    background: #f0f0ee;
+    color: #363734;
+    font-family: var(--serif);
+    line-height: 1.9;
+}
+
+.travel-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.travel-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.travel-page .site-header {
+    height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(238, 238, 236, .95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(41, 41, 41, .08);
+}
+
+
+.site-header nav {
+    display: flex;
+    gap: 32px
+}
+
+.site-header nav a {
+    font-size: 13px;
+    color: #565754;
+    transition: color .2s
+}
+
+.site-header nav a:hover {
+    color: #343532
+}
+
+
+.travel-page .header-inner {
+    height: 100%;
+    max-width: 1080px;
+    padding: 0 28px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.travel-page .site-logo {
+    font-size: 11px;
+    line-height: 1.25;
+    letter-spacing: .04em;
+    color: var(--green);
+}
+
+.travel-page .site-logo strong {
+    font-size: 15px;
+}
+
+.travel-page .site-header nav {
+    display: flex;
+    gap: 32px;
+}
+
+.travel-page .site-header nav a {
+    font-size: 13px;
+    color: #565754;
+    transition: color .2s;
+}
+
+.travel-page .site-header nav a:hover {
+    color: #343532;
+}
+
+.travel-page .site-footer {
+    padding: 25px 30px;
+    text-align: center;
+    color: #777875;
+    font-size: 10px;
+}
+
+.travel-page .footer-home {
+    font-size: 12px;
+    color: #555653;
+}
+
+.travel-page .site-footer p {
+    margin: 4px 0;
+}
+
+.travel-breadcrumb {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 24px 30px 0;
+    display: flex;
+    gap: 10px;
+    color: #858681;
+    font-size: 11px
+}
+
+.travel-breadcrumb a {
+    color: #555653
+}
+
+.trip-hero {
+    max-width: 1160px;
+    min-height: 690px;
+    margin: 0 auto;
+    padding: 38px 30px 90px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr .78fr;
+    align-items: center;
+    gap: 7%;
+    position: relative
+}
+
+.trip-hero-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.trip-hero-copy .eyebrow {
+    margin-bottom: 35px
+}
+
+.trip-hero-copy .eyebrow span {
+    color: #999a96
+}
+
+.trip-location,
+.trip-kicker {
+    font: 600 10px/1.5 var(--sans);
+    letter-spacing: .19em;
+    color: #777875
+}
+
+.trip-location {
+    margin: 0 0 9px
+}
+
+.trip-hero h1 {
+    font-size: clamp(24px, 7vw, 86px);
+    line-height: 1.25;
+    letter-spacing: .04em;
+    margin: 0 0 25px
+}
+
+.trip-lead {
+    font-size: 19px;
+    line-height: 1.9;
+    color: #666763;
+    margin: 0 0 12px
+}
+
+.trip-answer {
+    font-size: 21px;
+    line-height: 1.8;
+    margin: 0;
+    color: #676864
+}
+
+.trip-answer strong {
+    font-size: 25px;
+    color: #484945
+}
+
+.trip-down {
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 33px;
+    padding: 10px 16px;
+    border: 1px solid #bfc0bc;
+    border-radius: 30px;
+    color: #5d5e5a;
+    font-size: 12px
+}
+
+.trip-down:hover {
+    background: #e4e4e2
+}
+
+.trip-hero-photo {
+    height: 550px;
+    position: relative;
+    background: #dededc;
+    box-shadow: 14px 15px 0 #ddddda;
+    overflow: hidden
+}
+
+.trip-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%
+}
+
+.trip-hero-photo figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 18px 13px;
+    background: linear-gradient(transparent, #151714a8);
+    color: white;
+    font-size: 11px
+}
+
+.trip-hero-stamp {
+    position: absolute;
+    right: 0;
+    bottom: 74px;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background: #737470;
+    color: #f4f4f2;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    transform: rotate(8deg)
+}
+
+.walk-note {
+    margin-top: 22px;
+    padding: 13px 15px;
+    background: #e4e4e2;
+    color: #696a66;
+    font-size: 11px
+}
+
+.walk-note span {
+    margin-right: 7px
+}
+
+.travel-feature {
+    padding-top: 38px;
+    padding-bottom: 55px
+}
+
+.travel-feature-card {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    min-height: 270px;
+    background: #e4e4e2;
+    border: 1px solid #d5d5d2;
+    overflow: hidden;
+    transition: transform .2s, box-shadow .2s
+}
+
+.travel-feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px #33333316
+}
+
+.travel-feature-card>img {
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center 48%
+}
+
+.travel-feature-copy {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 36px;
+    gap: 10px
+}
+
+.travel-feature-copy .eyebrow {
+    margin: 0
+}
+
+.travel-feature-copy>strong {
+    font-size: 28px;
+    letter-spacing: .04em
+}
+
+.travel-feature-copy>span:not(.eyebrow):not(.travel-feature-cta) {
+    font-size: 12px;
+    color: #696a66;
+    line-height: 1.9
+}
+
+.travel-feature-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    margin-top: 6px;
+    padding: 8px 13px;
+    border: 1px solid #bfc0bc;
+    border-radius: 24px;
+    font-size: 11px;
+    color: #5d5e5a
+}
+
+@media(max-width:760px) {
+    .travel-page .header-inner {
+        padding-left: 17px;
+        padding-right: 17px
+    }
+
+    .travel-page .site-header nav {
+        gap: 12px
+    }
+
+    .travel-page .site-header nav a {
+        font-size: 10px
+    }
+
+    .travel-breadcrumb {
+        padding: 18px 20px 0
+    }
+
+    .trip-hero {
+        min-height: 0;
+        padding: 30px 22px 75px;
+        grid-template-columns: 1fr;
+        gap: 34px
+    }
+
+    .trip-hero-copy .eyebrow {
+        margin-bottom: 22px
+    }
+
+    .trip-hero h1 {
+        font-size: clamp(24px, 13vw, 66px);
+        margin-bottom: 15px
+    }
+
+    .trip-lead {
+        font-size: 16px
+    }
+
+    .trip-answer {
+        font-size: 18px
+    }
+
+    .trip-answer strong {
+        font-size: 22px
+    }
+
+    .trip-hero-photo {
+        height: min(125vw, 480px);
+        max-width: 430px;
+        width: 100%;
+        justify-self: center
+    }
+
+    .trip-hero-stamp {
+        right: 11px;
+        bottom: 48px;
+        width: 78px;
+        height: 78px;
+        font-size: 10px
+    }
+
+    .travel-feature {
+        padding-top: 22px;
+        padding-bottom: 38px
+    }
+
+    .travel-feature-card {
+        grid-template-columns: 1fr
+    }
+
+    .travel-feature-card>img {
+        height: 210px;
+        min-height: 0
+    }
+
+    .travel-feature-copy {
+        padding: 22px
+    }
+
+    .travel-feature-copy>strong {
+        font-size: 24px
+    }
+}
+
+@media(max-width:390px) {
+    .trip-hero h1 {
+        font-size: 24px
+    }
+
+    .travel-page .site-logo strong {
+        font-size: 12px
+    }
+
+    .travel-page .site-header nav {
+        gap: 9px
+    }
+
+    .travel-page .site-header nav a {
+        font-size: 9px
+    }
+}
+
+
+
+.travel-index-intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 90px 30px 50px
+}
+
+.travel-index-intro .trip-kicker {
+    margin: 0 0 12px
+}
+
+.travel-index-intro h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.45;
+    letter-spacing: .04em;
+    margin: 0 0 14px
+}
+
+.travel-index-intro>p:last-child {
+    font-size: 13px;
+    color: #696a66
+}
+
+.travel-index-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 30px 110px
+}
+
+.travel-index-card {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    overflow: hidden;
+    background: #f8f8f7;
+    border: 1px solid #d5d5d2;
+    border-radius: 12px;
+    box-shadow: 0 5px 14px #33333312;
+    transition: transform .2s, box-shadow .2s
+}
+
+.travel-index-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px #33333320
+}
+
+.travel-index-card>img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    object-fit: cover
+}
+
+.travel-index-card-copy {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 11px
+}
+
+.travel-index-card-copy>strong {
+    font-size: 24px
+}
+
+.travel-index-card-copy>span:not(.trip-kicker):not(.travel-index-card-link) {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #696a66
+}
+
+.travel-index-card-copy time {
+    font: 11px var(--sans);
+    color: #777875
+}
+
+.trip-hero {
+    max-width: 1160px;
+    width: calc(100% - 60px);
+    height: min(760px, 78vh);
+    min-height: 550px;
+    margin: 25px auto 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #4d504d;
+    box-shadow: 14px 15px 0 #ddddda
+}
+
+.trip-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%
+}
+
+.trip-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #191b19b8 0%, #191b1966 45%, transparent 100%), linear-gradient(0deg, #191b1988, transparent 45%);
+    pointer-events: none
+}
+
+.trip-hero-copy {
+    position: relative;
+    z-index: 1;
+    width: min(720px, 80%);
+    padding: 65px 55px;
+    color: #fff
+}
+
+.trip-hero-copy .eyebrow,
+.trip-hero-copy .trip-location {
+    color: #efefed
+}
+
+.trip-hero-copy .eyebrow span {
+    color: #d5d5d1
+}
+
+.trip-hero h1 {
+    font-size: clamp(24px, 8vw, 96px);
+    text-shadow: 0 2px 18px #0005
+}
+
+.trip-lead,
+.trip-answer,
+.trip-answer strong {
+    color: #f5f5f3
+}
+
+.trip-down {
+    color: #fff;
+    border-color: #ffffffa0;
+    background: #ffffff12
+}
+
+.trip-down:hover {
+    background: #ffffff2b
+}
+
+.trip-hero-caption {
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    bottom: 15px;
+    margin: 0;
+    color: #fff;
+    font-size: 10px;
+    text-shadow: 0 1px 5px #000
+}
+
+@media(max-width:760px) {
+    .travel-index-intro {
+        padding: 62px 22px 30px
+    }
+
+    .travel-index-list {
+        padding: 10px 22px 75px
+    }
+
+    .travel-index-card {
+        grid-template-columns: 1fr
+    }
+
+    .travel-index-card>img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        min-height: 0
+    }
+
+    .travel-index-card-copy {
+        padding: 24px
+    }
+
+    .travel-index-card-copy>strong {
+        font-size: 25px
+    }
+
+    .trip-hero {
+        width: calc(100% - 32px);
+        height: min(82vh, 760px);
+        min-height: 540px;
+        margin-top: 16px
+    }
+
+    .trip-hero-image {
+        object-position: center center
+    }
+
+    .trip-hero::after {
+        background: linear-gradient(0deg, #191b19d9 0%, #191b1980 48%, #191b191a 100%)
+    }
+
+    .trip-hero-copy {
+        width: 100%;
+        padding: 35px 24px 65px
+    }
+
+    .trip-hero-copy .eyebrow {
+        margin-bottom: 18px
+    }
+
+    .trip-hero h1 {
+        font-size: clamp(24px, 13vw, 72px)
+    }
+
+    .trip-hero-caption {
+        right: 14px;
+        bottom: 11px;
+        font-size: 9px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .travel-index-card,
+    .travel-feature-card {
+        transition: none
+    }
+
+    .travel-index-card:hover,
+    .travel-feature-card:hover {
+        transform: none
+    }
+}
+
+.trip-hero.hero {
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    min-height: 90svh;
+    margin: 0;
+    padding: 65px max(35px, calc((100% - 1130px)/2 + 35px)) 100px;
+    box-shadow: none;
+    background: #4d504d
+}
+
+.trip-hero-image {
+    z-index: -1
+}
+
+.trip-hero::after {
+    z-index: -1;
+    background: linear-gradient(90deg, #191b19b8 0%, #191b1966 45%, transparent 100%), linear-gradient(0deg, #191b1988, transparent 45%)
+}
+
+.trip-hero .trip-hero-copy {
+    width: min(620px, 75%);
+    padding: 0;
+    color: #fff;
+    z-index: 2
+}
+
+.trip-hero .trip-hero-copy .eyebrow,
+.trip-hero .trip-location {
+    color: #f0f0ee
+}
+
+.trip-hero .trip-hero-copy .eyebrow {
+    margin-bottom: 26px
+}
+
+.trip-hero .trip-location {
+    font-size: 11px
+}
+
+.trip-hero h1 {
+    font-size: clamp(24px, 7vw, 80px);
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 2px 18px #0005
+}
+
+.trip-hero .trip-lead,
+.trip-hero .trip-answer,
+.trip-hero .trip-answer strong {
+    color: #fff
+}
+
+.trip-hero .trip-answer {
+    font-size: 22px
+}
+
+.trip-hero .trip-answer strong {
+    font-size: 28px
+}
+
+.trip-hero .pill-link {
+    background: #777875;
+    color: #fff
+}
+
+.trip-hero .pill-link:hover {
+    background: #5d5e5b
+}
+
+.trip-hero .hero-doodle {
+    z-index: 1;
+    color: #fff
+}
+
+.trip-hero .hero-flower {
+    opacity: .8
+}
+
+.trip-hero .flower-medium {
+    left: 58%;
+    top: 18%
+}
+
+.trip-hero .flower-small {
+    right: 30%;
+    top: 52%
+}
+
+.trip-hero .flower-large {
+    right: 5%;
+    bottom: 18%
+}
+
+.trip-hero .hero-orbit {
+    z-index: 0;
+    border-color: #ffffff70
+}
+
+.trip-hero .scroll-cue {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    transform: translateX(-50%);
+    color: #fff;
+    z-index: 2;
+    font: 600 10px/1.4 var(--sans);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    animation: travel-scroll-float 1.8s ease-in-out infinite;
+}
+
+.trip-hero .scroll-arrow {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+@keyframes travel-scroll-float {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trip-hero .scroll-cue {
+        animation: none;
+    }
+}
+
+.trip-hero-caption {
+    z-index: 2;
+    text-shadow: 0 1px 5px #000
+}
+
+@media(max-width:760px) {
+    .trip-hero.hero {
+        width: 100%;
+        min-height: 90vh;
+        min-height: 90svh;
+        padding: 50px 27px 100px;
+        text-align: center
+    }
+
+    .trip-hero::after {
+        background: linear-gradient(0deg, #191b19c9 0%, #191b1970 48%, #191b191a 100%)
+    }
+
+    .trip-hero .trip-hero-copy {
+        width: 100%;
+        max-width: none
+    }
+
+    .trip-hero .trip-hero-copy .eyebrow {
+        margin-bottom: 20px
+    }
+
+    .trip-hero h1 {
+        font-size: clamp(24px, 11vw, 66px)
+    }
+
+    .trip-hero .trip-lead {
+        font-size: 16px
+    }
+
+    .trip-hero .trip-answer {
+        font-size: 19px
+    }
+
+    .trip-hero .trip-answer strong {
+        font-size: 24px
+    }
+
+    .trip-hero .flower-medium {
+        left: 14%;
+        top: 14%
+    }
+
+    .trip-hero .flower-small {
+        right: 17%;
+        top: 47%
+    }
+
+    .trip-hero .flower-large {
+        right: 7%;
+        bottom: 21%
+    }
+
+    .trip-hero .hero-orbit {
+        width: 150vw;
+        height: 105vh
+    }
+
+    .trip-hero-caption {
+        right: 14px;
+        bottom: 54px;
+        font-size: 9px
+    }
+}
+
+.trip-hero .hero-doodle,
+.trip-hero .hero-orbit {
+    display: none
+}
+
+.trip-title-slot {
+    min-height: clamp(64px, 10vw, 100px);
+    margin: 0 0 20px
+}
+
+.trip-hero h1 {
+    margin: 0;
+    white-space: nowrap
+}
+
+.trip-hero.hero {
+    width: 100%;
+    max-width: none
+}
+
+.trip-hero-image {
+    width: 100%
+}
+
+@media(max-width:760px) {
+    .trip-title-slot {
+        min-height: 58px
+    }
+}

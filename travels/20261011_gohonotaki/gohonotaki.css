@@ -1,0 +1,627 @@
+/* Styles private to the Gohotaki travel page. Shared travel layout stays in ../travel.css. */
+body.gohonotaki-page {
+	isolation: isolate;
+	background: #292c29;
+}
+
+body.gohonotaki-page::before {
+	content: "";
+	position: fixed;
+	inset: -20px;
+	z-index: -1;
+	background: url("assets/1～3の滝.jpg") 0 0 / 460px auto repeat;
+	filter: brightness(.34) saturate(.55) blur(16px);
+	opacity: .72;
+	pointer-events: none;
+}
+
+.gohonotaki-page .memo-section {
+	position: relative;
+	box-sizing: border-box;
+	width: calc(100% - 60px);
+	max-width: 1100px;
+	margin: 52px auto;
+	padding: clamp(34px, 5vw, 60px);
+	background: #f8f8f5;
+	border: 1px solid #deded8;
+	box-shadow: 4px 7px 0 #20231e35, 0 18px 38px #1e201b32;
+	color: #3d3e39;
+}
+
+.gohonotaki-page .memo-section::before {
+	content: "";
+	position: absolute;
+	top: -11px;
+	left: 50%;
+	width: 92px;
+	height: 23px;
+	transform: translateX(-50%) rotate(-2deg);
+	background: #d9d8c9cf;
+	border: 1px solid #ffffff80;
+	box-shadow: 0 2px 5px #24251f20;
+	pointer-events: none;
+}
+
+.gohonotaki-page .memo-section > h2,
+.gohonotaki-page .memo-section > .trip-section-heading {
+	grid-column: 1 / -1;
+	width: 100%;
+	max-width: none;
+}
+
+.gohonotaki-page .memo-section > h2,
+.gohonotaki-page .memo-section .trip-section-heading h2 {
+	font-size: clamp(25px, 3.5vw, 40px);
+	line-height: 1.5;
+	letter-spacing: .025em;
+}
+
+.gohonotaki-page .trip-section-heading {
+	width: 100%;
+	margin: 0 0 26px;
+	text-align: center;
+}
+
+.gohonotaki-page .trip-section-heading > p:last-child {
+	margin: 0;
+	color: #696a66;
+	font-size: 13px;
+}
+
+.gohonotaki-page .memo-section p {
+	color: #555650;
+	font-size: 14px;
+	line-height: 2.1;
+}
+
+.gohonotaki-page .trip-hero.hero {
+	width: 100%;
+	max-width: none;
+	min-height: 90vh;
+	min-height: 90svh;
+	margin: 0;
+	box-shadow: none;
+}
+
+.gohonotaki-page .trip-hero .trip-hero-copy {
+	text-align: left;
+}
+
+.gohonotaki-page .trip-intro h2 {
+	margin: 0 0 22px;
+	font-size: clamp(32px, 5vw, 52px);
+}
+
+.gohonotaki-page .trip-intro h2 strong {
+	color: #343631;
+	font-size: 1.16em;
+}
+
+.gohonotaki-page .trip-intro-copy {
+	max-width: 760px;
+}
+
+.gohonotaki-page .trip-intro-copy p {
+	margin: 0 0 17px;
+}
+
+.gohonotaki-page .trip-intro-copy .trip-lead {
+	color: #42443f;
+	font-size: clamp(17px, 2.1vw, 23px);
+	font-weight: 700;
+}
+
+.gohonotaki-page .trip-map {
+	margin-top: 34px;
+}
+
+.gohonotaki-page .trip-map-frame {
+	max-width: 900px;
+	height: 420px;
+	margin: 0 auto;
+	border: 1px solid #d2d2ce;
+	background: #e5e5e3;
+	overflow: hidden;
+	box-shadow: 7px 8px 0 #dededb;
+}
+
+.gohonotaki-page .trip-map-frame iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.gohonotaki-page .trip-map-address {
+	max-width: 900px;
+	margin: 20px auto 0;
+	color: #696a66;
+	font-size: 12px;
+}
+
+.gohonotaki-page .trip-map-link {
+	display: flex;
+	width: max-content;
+	gap: 18px;
+	align-items: center;
+	margin: 12px auto 0;
+	padding: 9px 14px;
+	border: 1px solid #bfc0bc;
+	border-radius: 24px;
+	color: #5d5e5a;
+	font-size: 11px;
+}
+
+.gohonotaki-page .trip-map-address,
+.gohonotaki-page .trip-map-link {
+	max-width: 100%;
+}
+
+.gohonotaki-page .trip-parking {
+	display: grid;
+	grid-template-columns: 1fr .88fr;
+	align-items: center;
+	gap: 7%;
+}
+
+.gohonotaki-page .trip-parking > h2 {
+	margin: 0 0 22px;
+}
+
+.gohonotaki-page .trip-parking > div {
+	grid-column: 1;
+}
+
+.gohonotaki-page .trip-parking > img {
+	grid-column: 2;
+	grid-row: 2;
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 8px;
+	box-sizing: border-box;
+	background: #fff;
+	box-shadow: 0 5px 16px #20231e1f;
+	transform: rotate(1deg);
+}
+
+.gohonotaki-page .trip-parking > h2 + div {
+	grid-column: 1;
+}
+
+.gohonotaki-page .trip-parking > img {
+	grid-row: 2;
+}
+
+.gohonotaki-page .trip-stages .trip-section-heading {
+	margin: 0 0 28px;
+}
+
+.gohonotaki-page .stage-overview {
+	display: grid;
+	grid-template-columns: 1.2fr .8fr;
+	align-items: start;
+	gap: 20px;
+	max-width: none;
+	margin: 0 auto 26px;
+}
+
+.gohonotaki-page .stage-overview-photo {
+	min-height: 0;
+	margin: 0;
+	background: #e8e8e3;
+}
+
+.gohonotaki-page .stage-overview-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	min-height: 0;
+	object-fit: contain;
+}
+
+.gohonotaki-page .stage-overview-photo figcaption {
+	padding: 10px 12px;
+	background: #fff;
+	color: #696a66;
+	font-size: 11px;
+}
+
+.gohonotaki-page .cascade-diagram {
+	padding: 0;
+	background: #fff;
+}
+
+.gohonotaki-page .cascade-diagram img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.gohonotaki-page .cascade-diagram figcaption {
+	padding: 12px 15px 15px;
+	font-size: 11px;
+	line-height: 1.8;
+}
+
+.gohonotaki-page .memo-card {
+	box-sizing: border-box;
+	padding: 20px 24px;
+	background: #fff;
+	border: 1px solid #e2e2dc;
+}
+
+.gohonotaki-page .memo-card p {
+	margin: 0 0 14px;
+}
+
+.gohonotaki-page .memo-card p:last-child {
+	margin-bottom: 0;
+}
+
+.gohonotaki-page .five-falls-list {
+	max-width: none;
+	margin: 0;
+}
+
+.gohonotaki-page .five-falls-list > p {
+	margin: 0 0 4px;
+}
+
+.gohonotaki-page .stage-grid {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 3px;
+	max-width: none;
+}
+
+.gohonotaki-page .stage-card {
+	display: block;
+	min-width: 0;
+	margin: 0;
+	background: #fff;
+	border: 1px solid #deded8;
+}
+
+.gohonotaki-page .stage-card img {
+	display: block;
+	width: 100%;
+	height: 112px;
+	object-fit: cover;
+}
+
+.gohonotaki-page .stage-card figcaption {
+	min-height: 38px;
+	padding: 8px;
+	grid-template-columns: 20px 1fr;
+	column-gap: 4px;
+}
+
+.gohonotaki-page .stage-card figcaption strong {
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+.gohonotaki-page .stage-card figcaption span {
+	color: #888985;
+	font: 500 10px var(--sans);
+}
+
+.gohonotaki-page .fall-story,
+.gohonotaki-page .trip-walk {
+	display: grid;
+	grid-template-columns: 1fr .9fr;
+	align-items: center;
+	gap: 22px 7%;
+}
+
+.gohonotaki-page .fall-story > h2,
+.gohonotaki-page .trip-walk > h2 {
+	margin: 0;
+}
+
+.gohonotaki-page .fall-story-copy,
+.gohonotaki-page .walk-copy {
+	grid-column: 1;
+}
+
+.gohonotaki-page .fall-story-photo,
+.gohonotaki-page .walk-photo {
+	grid-column: 2;
+	grid-row: 2;
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #e2e2dc;
+}
+
+.gohonotaki-page .trip-walk .walk-photo {
+	grid-column: 1;
+}
+
+.gohonotaki-page .trip-walk .walk-copy {
+	grid-column: 2;
+}
+
+.gohonotaki-page .trip-walk .walk-photo {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 520px;
+	justify-self: center;
+}
+
+.gohonotaki-page .trip-walk .walk-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: none;
+	aspect-ratio: auto;
+	object-fit: initial;
+}
+
+.gohonotaki-page .fall-story-photo img,
+.gohonotaki-page .walk-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 620px;
+	object-fit: contain;
+	background: #e8e8e3;
+}
+
+.gohonotaki-page .fall-story-photo figcaption {
+	padding: 10px 3px 1px;
+	color: #696a66;
+	font-size: 11px;
+	line-height: 1.8;
+}
+
+.gohonotaki-page .fall-story-reverse .fall-story-copy {
+	grid-column: 2;
+}
+
+.gohonotaki-page .fall-story-reverse .fall-story-photo {
+	grid-column: 1;
+}
+
+.gohonotaki-page .trip-emphasis {
+	margin: 22px 0 5px;
+	color: #45463f;
+	font-size: 25px !important;
+	font-weight: 700;
+	letter-spacing: .14em;
+}
+
+.gohonotaki-page .trip-stream-photo {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 22px;
+}
+
+.gohonotaki-page .trip-stream-photo > h2 {
+	margin: 0;
+}
+
+.gohonotaki-page .trip-stream-photo > figure {
+	grid-column: 1;
+	grid-row: 2;
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+}
+
+.gohonotaki-page .trip-stream-photo > figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.gohonotaki-page .trip-stream-photo .memo-card {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.gohonotaki-page .journal-wide-photo {
+	grid-column: 1 / -1;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #e2e2dc;
+	box-shadow: none;
+	transform: none;
+}
+
+.gohonotaki-page .journal-wide-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 620px;
+	object-fit: contain;
+	background: #e8e8e3;
+}
+
+.gohonotaki-page .journal-wide-photo figcaption {
+	padding: 11px 4px 2px;
+	color: #696a66;
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+.gohonotaki-page .other-falls .trip-section-heading {
+	margin: 0 0 28px;
+}
+
+.gohonotaki-page .other-falls-grid {
+	display: grid;
+	max-width: none;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.gohonotaki-page .other-falls-grid img {
+	width: 100%;
+	height: auto;
+	max-height: 560px;
+	object-fit: cover;
+}
+
+.gohonotaki-page .other-falls-grid figure {
+	margin: 0;
+	background: #fff;
+}
+
+.gohonotaki-page .other-falls-grid figcaption {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 14px 16px 17px;
+}
+
+.gohonotaki-page .other-falls-grid figcaption strong {
+	font-size: 17px;
+}
+
+.gohonotaki-page .other-falls-grid figcaption span {
+	color: #696a66;
+	font-size: 11px;
+}
+
+.gohonotaki-page .other-falls .memo-card {
+	max-width: 800px;
+	margin: 28px auto 0;
+}
+
+.gohonotaki-page .trip-last-word > h2 {
+	margin: 0 0 20px;
+}
+
+.gohonotaki-page .trip-last-word > p {
+	max-width: 800px;
+	margin: 0 auto 16px;
+}
+
+.gohonotaki-page .trip-last-word > a {
+	display: flex;
+	width: max-content;
+	gap: 20px;
+	align-items: center;
+	margin: 28px auto 0;
+	padding: 11px 17px;
+	border: 1px solid #bfc0bc;
+	border-radius: 30px;
+	color: #5d5e5a;
+	font-size: 11px;
+}
+
+.gohonotaki-page .trip-gelato-photo {
+	box-sizing: border-box;
+	width: min(100%, 540px);
+	margin: 28px auto 0;
+	padding: 8px;
+	background: #fff;
+	border: 1px solid #deded8;
+	box-shadow: 0 5px 16px #20231e1f;
+}
+
+.gohonotaki-page .trip-gelato-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 420px;
+	margin: 0;
+	object-fit: contain;
+}
+
+@media (max-width: 760px) {
+	.gohonotaki-page .memo-section {
+		width: calc(100% - 32px);
+		margin: 38px auto;
+		padding: 38px 22px;
+	}
+
+	.gohonotaki-page .trip-hero.hero {
+		min-height: 90vh;
+		min-height: 90svh;
+	}
+
+	.gohonotaki-page .trip-hero h1 {
+		font-size: clamp(24px, 7vw, 38px);
+		letter-spacing: .01em;
+	}
+
+	.gohonotaki-page .trip-map {
+		margin-top: 26px;
+	}
+
+	.gohonotaki-page .trip-map-frame {
+		height: 340px;
+	}
+
+	.gohonotaki-page .trip-parking,
+	.gohonotaki-page .fall-story,
+	.gohonotaki-page .trip-walk,
+	.gohonotaki-page .trip-stream-photo {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 20px;
+	}
+
+	.gohonotaki-page .trip-walk > h2 {
+		grid-column: 1 / -1;
+		width: 100%;
+	}
+
+	.gohonotaki-page .trip-walk .walk-photo,
+	.gohonotaki-page .trip-walk .walk-copy,
+	.gohonotaki-page .trip-walk .journal-wide-photo {
+		grid-column: 1;
+		grid-row: auto;
+		min-width: 0;
+	}
+
+	.gohonotaki-page .trip-parking > div,
+	.gohonotaki-page .trip-parking > img,
+	.gohonotaki-page .fall-story-copy,
+	.gohonotaki-page .fall-story-photo,
+	.gohonotaki-page .walk-copy,
+	.gohonotaki-page .walk-photo,
+	.gohonotaki-page .trip-stream-photo > figure,
+	.gohonotaki-page .trip-stream-photo .memo-card {
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.gohonotaki-page .fall-story-reverse .fall-story-copy,
+	.gohonotaki-page .fall-story-reverse .fall-story-photo {
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.gohonotaki-page .stage-overview {
+		grid-template-columns: 1fr;
+	}
+
+	.gohonotaki-page .stage-card img {
+		height: 100px;
+	}
+
+	.gohonotaki-page .stage-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.gohonotaki-page .stage-card figcaption {
+		padding: 8px 6px;
+	}
+
+	.gohonotaki-page .other-falls-grid {
+		gap: 8px;
+	}
+
+	.gohonotaki-page .trip-memory-gallery {
+		grid-template-columns: 1fr;
+		padding: 38px 22px;
+	}
+
+}
